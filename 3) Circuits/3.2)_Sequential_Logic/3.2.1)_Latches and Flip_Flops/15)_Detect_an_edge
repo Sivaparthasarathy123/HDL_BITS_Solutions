@@ -1,0 +1,12 @@
+module top_module (
+    input clk,
+    input [7:0] in,
+    output [7:0] pedge
+);  
+    integer i;
+    reg [7:0]previn;
+    always@(posedge clk)begin
+        pedge <= ~previn & in;
+        previn <= in;  
+    end
+endmodule
