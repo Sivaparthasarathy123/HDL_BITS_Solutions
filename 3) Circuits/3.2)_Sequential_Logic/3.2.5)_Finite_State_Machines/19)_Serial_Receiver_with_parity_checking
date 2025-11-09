@@ -1,0 +1,66 @@
+module top_module(
+    input clk,
+    input in,
+    input reset,    
+    output [7:0] out_byte,
+    output done
+); 
+	
+    parameter idle=0, start=1, data=2, error=3, parity=4;
+    reg[2:0] state,next_state;
+    reg odd;
+    reg [7:0] out_byte1;
+    
+    odd_parity p_check(.clk(clk),.reset(state == idle),.in(in),.odd(odd));
+
+    
+    integer i;
+    always@(*)begin
+        case(state)
+            idle: next_state = (~in)? start: idle;
+            start:begin
+                next_state = (i == 9 && in == ~odd)? data : (i==9 && ~(in==~odd))? error : start;
+            end
+            data  : next_state = (in)? parity : error;
+            parity: next_state = (~in)? start: idle;
+            error : next_state = (in)? idle : error;
+        endcase
+    end
+    
+    always @(posedge clk) begin
+        if(reset)begin
+            state <= idle;
+            i <= 0; 
+        end
+        else begin
+            state <= next_state;
+            if(next_state == start)begin
+                i = i + 1;
+                if (i > 1)
+                    out_byte[i - 2] = in;
+            end
+            if (next_state == error || next_state == parity) begin
+                i = 0;
+            end
+        end        
+    end
+    
+    assign done = (state == parity);
+    //assign out_byte = done ? out_byte1 : 8'b0;
+
+endmodule
+
+
+module odd_parity(
+    input clk,
+    input reset,
+    input in,
+    output reg odd);
+    always@(posedge clk)begin
+        if (reset)
+            odd <= 0;
+        else if(in)
+            odd <= ~odd; //^ in;  
+    end
+endmodule
+
