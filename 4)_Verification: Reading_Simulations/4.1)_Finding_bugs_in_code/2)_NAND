@@ -1,0 +1,9 @@
+module top_module (input a, input b, input c, output out);
+    wire and_out;
+
+    // Instantiate 5-input AND gate, tie unused inputs to 1
+    andgate inst1 (and_out, a, b, c, 1'b1, 1'b1);
+
+    // NAND output = NOT of AND output
+    assign out = ~and_out;
+endmodule
