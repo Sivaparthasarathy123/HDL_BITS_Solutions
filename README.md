@@ -4,12 +4,12 @@ Every question from HDL BITS has been solved here with clean, synthesizable, and
 
 Key Features :
 
-  => Complete topic-wise coverage of HDL BITS questions
-  => Solutions for all questions available on the platform
-  => Well-structured, readable, and synthesizable Verilog code
-  => Each solution is commented clearly, explaining the logic and methodology
-  => Organized by topics, making it easy to navigate and learn systematically
-  => Ideal as a reference for study, projects, or interview preparation
+  => Complete topic-wise coverage of HDL BITS questions.
+  => Solutions for all questions available on the platform.
+  => Well-structured, readable, and synthesizable Verilog code.
+  => Each solution is commented clearly, explaining the logic and methodology.
+  => Organized by topics, making it easy to navigate and learn systematically.
+  => Ideal as a reference for study, projects, or interview preparation.
   
 Topics Covered :
 
