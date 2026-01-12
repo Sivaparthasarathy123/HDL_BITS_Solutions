@@ -5,10 +5,15 @@ Every question from HDL BITS has been solved here with clean, synthesizable, and
 Key Features :
 
   => Complete topic-wise coverage of HDL BITS questions.
+  
   => Solutions for all questions available on the platform.
+  
   => Well-structured, readable, and synthesizable Verilog code.
+  
   => Each solution is commented clearly, explaining the logic and methodology.
+  
   => Organized by topics, making it easy to navigate and learn systematically.
+  
   => Ideal as a reference for study, projects, or interview preparation.
   
 Topics Covered :
@@ -16,12 +21,19 @@ Topics Covered :
 This repository includes solutions for all fundamental and advanced Verilog topics, such as:
 
   => Combinational Logic: Gates, multiplexers, demultiplexers, decoders, encoders
+  
   => Sequential Logic: Flip-flops, latches, registers, counters, shift registers
+  
   => Finite State Machines (FSM): Moore and Mealy machines
+  
   => Arithmetic Circuits: Adders, subtractors, comparators, ALUs
+  
   => Procedural Constructs: always, initial, if-else, case, loops (for, while)
+  
   => Parameterized Designs: Scalable and reusable Verilog modules
+  
   => Vector and Bitwise Operations: Manipulating multi-bit data efficiently
+  
   => Timing and Clocking Concepts: Synchronous and asynchronous designs
   
 Purpose of This Repository :
@@ -29,7 +41,10 @@ Purpose of This Repository :
 This repository is created to:
 
   => Provide a complete reference for HDL BITS in Verilog
+  
   => Help learners understand all digital design concepts systematically
+  
   => Prepare students and professionals for VLSI, FPGA, and ASIC design interviews
+  
   => Serve as a ready reference for academic projects, RTL design exercises, and practice
 
